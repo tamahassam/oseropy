@@ -7,5 +7,5 @@ RUN pip install flask
 
 # WORKDIR $project_dir
 
-# RUN echo　"curl http://localhost:5000" >> ~/.bashrc
+# RUN echo "curl http://localhost:5000" >> ~/.bashrc
 # RUN source ~/.bashrc
