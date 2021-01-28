@@ -1,11 +1,13 @@
-FROM python:3.6
+FROM python:3.8-slim
 
-RUN pip install --upgrade pip
-RUN pip install flask
+ENV PYTHONUNBUFFERED=1
 
-# ARG project_dir=/projects/
+WORKDIR /oseropy
 
-# WORKDIR $project_dir
+COPY poetry.lock pyproject.toml ./
 
-# RUN echo "curl http://localhost:5000" >> ~/.bashrc
-# RUN source ~/.bashrc
+RUN pip install -U pip
+RUN pip install poetry
+
+RUN poetry config virtualenvs.create false \
+  && poetry install

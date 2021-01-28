@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build: .
+    user: root
+    volumes:
+      - ./:/oseropy
+    working_dir: /oseropy
+    ports:
+      - "8000:8000"
+    # command: python manage.py runserver 0.0.0.0:8000
+    tty: true
+    stdin_open: true
+    command: bash -c "/bin/bash"
