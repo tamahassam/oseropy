@@ -1,4 +1,5 @@
 FROM python:3.8-slim
+# Debian GNU/Linux 10
 
 ENV PYTHONUNBUFFERED=1
 
