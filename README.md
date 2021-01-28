@@ -1,8 +1,16 @@
 # oseropy
 
-## Debian GNU/Linux 10
 
 
+### Build
+```shell
+docker-compose up -d --build
+```
+### Set up server
+```shell
+docker exec -it { container } bash -c "python manage.py runserver 0.0.0.0:8000"
+```
+___
 ### build
 docker build -f ./Dockerfile -t oseropy .
 
